@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan du Site | TNDblogdev</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Configuration des variables de couleur pour la cohérence */
+        :root {
+            --primary-color: #3b82f6; /* Bleu Vif (Tailwind blue-500) */
+            --header-bg: #1f2937; /* Gris foncé pour header/footer (Tailwind gray-800) */
+            --text-color: #374151; /* Gris foncé pour le texte (Tailwind gray-700) */
+            --link-hover: #1e40af; /* Bleu foncé pour le survol */
+        }
+        
+        /* Styles de base et personnalisation Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+            background-color: #f9fafb; /* Très léger gris pour le fond */
+        }
+
+        /* --- Styles Spécifiques pour le Plan du Site --- */
+        
+        /* Conteneur de la grille (4 colonnes par défaut) */
+        .sitemap-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        /* Styles de la section (équivalent à une carte) */
+        .sitemap-section {
+            border: 1px solid #e5e7eb; /* Bordure légère */
+            padding: 24px;
+            border-radius: 12px;
+            background-color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+        }
+        
+        .sitemap-section:hover {
+            transform: translateY(-2px); /* Léger effet de survol */
+        }
+
+        .sitemap-section h2 {
+            color: var(--primary-color); 
+            font-size: 1.3em;
+            margin-top: 0;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #eff6ff; /* Ligne de séparation légère */
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .sitemap-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sitemap-section li {
+            margin-bottom: 12px;
+            line-height: 1.5;
+            font-size: 0.95em;
+        }
+
+        .sitemap-section li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .sitemap-section li a:hover {
+            color: var(--link-hover);
+            text-decoration: underline;
+        }
+
+        /* Texte descriptif après le lien */
+        .sitemap-section li a + span {
+            color: #6b7280; /* Texte secondaire, plus discret */
+            font-weight: 400;
+            display: block; /* Force le texte descriptif à la ligne si besoin */
+            font-size: 0.9em;
+        }
+        
+        /* --- Adaptation Responsive --- */
+        @media (max-width: 992px) {
+            .sitemap-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablette */
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .sitemap-grid {
+                grid-template-columns: 1fr; /* 1 colonne sur mobile */
+                gap: 20px;
+            }
+        }
+    </style>
+    <!-- Chosen Palette: Warm Neutrals and Professional Blue Accent -->
+    <!-- Application Structure Plan: Thematic grid structure (4 columns, collapsing responsively) chosen to clearly segregate primary site navigation, technical categories, utility links, and recent content. This logical grouping enhances findability (Information Architecture) and prevents overwhelming the user with a single, long list. User flow is linear exploration of links. -->
+    <!-- Visualization & Content Choices: Summary: Site structure -> Goal: Organize/Inform -> Viz/Presentation Method: HTML/CSS Grid with descriptive lists -> Interaction: Simple link navigation -> Justification: The goal of a sitemap is clarity and link accessibility, best achieved with a structured list, not charts. -> Library/Method: Tailwind + Embedded CSS Grid. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="p-4 md:p-8">
+
+    <main class="max-w-7xl mx-auto static-page bg-white rounded-xl shadow-lg p-6 md:p-10">
+        <h1 class="text-4xl font-extrabold text-gray-800 mb-2">Plan du Site</h1>
+        <p class="text-lg text-gray-500 mb-10">Explorez toutes les sections et tous les sujets abordés sur TNDBlogDev. Trouvez rapidement ce que vous cherchez.</p>
+
+        <div class="sitemap-grid">
+            
+            <!-- Colonne 1 : Navigation Principale -->
+            <section class="sitemap-section">
+                <h2>Navigation Principale</h2>
+                <ul>
+                    <li><a href="index.html">Accueil</a><span> - Les derniers articles, l'éditorial et les annonces importantes.</span></li>
+                    <li><a href="tutoriels.html">Tutoriels & Articles</a><span> - L'intégralité des publications avec fonction de filtre et de recherche.</span></li>
+                    <li><a href="a-propos.html">À Propos</a><span> - Mon histoire, ma mission et les objectifs de TNDblogdev.</span></li>
+                    <li><a href="contact.html">Contact</a><span> - Pour me contacter directement.</span></li>
+                </ul>
+            </section>
+
+            <!-- Colonne 2 : Catégories et Sujets Techniques -->
+            <section class="sitemap-section">
+                <h2>Catégories Techniques</h2>
+                <p class="text-sm text-gray-500 mb-3">Accès direct à nos thématiques principales :</p>
+                <ul>
+                    <li><a href="tutoriels.html?filter=java">Java & Spring Boot</a><span> - Tutoriels approfondis sur Spring Boot 3, JPA, Hibernate et le développement backend Java.</span></li>
+                    <li><a href="tutoriels.html?filter=frontend">Développement Front-end</a><span> - Maîtrise de HTML sémantique, CSS Grid et Flexbox pour des interfaces réactives.</span></li>
+                    <li><a href="tutoriels.html?filter=architecture">Architecture & Bonnes Pratiques</a><span> - Design patterns, code propre et optimisation des performances.</span></li>
+                    <li><a href="tutoriels.html?filter=carriere">Carrière & Productivité</a><span> - Conseils pour les développeurs, entretiens techniques et outils de travail.</span></li>
+                </ul>
+            </section>
+
+            <!-- Colonne 3 : Liens Légaux et Utilitaires -->
+            <section class="sitemap-section">
+                <h2>Informations Utiles</h2>
+                <p class="text-sm text-gray-500 mb-3">Ressources légales et utilitaires :</p>
+                <ul>
+                    <li><a href="confidentialite.html">Politique de Confidentialité</a><span> - Détails sur la gestion des données des utilisateurs.</span></li>
+                    <li><a href="plan.html">Plan du Site</a><span> - (La page actuelle pour une vue d'ensemble).</span></li>
+                    <!-- <li><a href="faq.html">FAQ</a><span> - Réponses aux questions fréquentes (à créer).</span></li> -->
+                    <li><a href="mentions-legales.html">Mentions Légales</a><span> - Informations d'identification et conditions générales.</span></li>
+                </ul>
+            </section>
+            
+            <!-- Colonne 4 : Articles Récents (Dynamique) -->
+            <section class="sitemap-section">
+                <h2>Articles Récents (Exemples)</h2>
+                <p class="text-sm text-gray-500 mb-3">Une sélection de nos dernières publications :</p>
+                <ul>
+                    <li><a href="articles.html?id=3">TNDblogdev : Démystifier Spring Boot et les Dépendances Clés</a></li>
+                    <li><a href="articles.html?id=1">Démarrer avec Spring Boot 3 : Le guide complet</a></li>
+                    <li><a href="articles.html?id=2">Maîtriser CSS Grid pour un Responsive Design parfait</a></li>
+                </ul>
+            </section>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

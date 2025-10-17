@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "titre": "Démarrer avec Spring Boot 3 : Le guide complet",
+    "auteur": "Admin Dev",
+    "date": "2025-10-01",
+    "categorie": "java",
+    "image": "placeholder-java.jpg",
+    "extrait": "Découvrez comment configurer rapidement un projet moderne avec Spring Boot...",
+    "contenuHTML": "<p>Bienvenue dans l'univers de Spring Boot ! Sa promesse est simple :...</p><h2>1. Initialisation du Projet</h2>..."
+  },
+  {
+    "id": 2,
+    "titre": "Maîtriser CSS Grid pour un Responsive Design parfait",
+    "auteur": "Admin Dev",
+    "date": "2025-09-28",
+    "categorie": "frontend",
+    "image": "placeholder-css.jpg",
+    "extrait": "Arrêtez Flexbox ! Découvrez pourquoi CSS Grid est l'outil ultime pour la création de mises en page...",
+    "contenuHTML": "<p>Le CSS Grid est une révolution...</p>"
+  },
+  {
+    "id": 3,
+    "titre": "TNDblogdev : Démystifier Spring Boot et les Dépendances Clés",
+    "auteur": "Admin TNDblogdev",
+    "date": "2025-10-04",
+    "categorie": "java",
+    "image": "placeholder-spring.jpg",
+    "extrait": "Plongez dans l'écosystème Spring Boot ! Nous explorons les trois dépendances fondamentales pour bâtir n'importe quelle application moderne. Un guide essentiel pour tout développeur TNDblogdev.",
+    "contenuHTML": "<p>Bienvenue sur **TNDblogdev** ! Si vous travaillez avec Java, vous savez que Spring Boot est le standard de l'industrie pour construire des applications robustes et prêtes pour la production. La magie de Spring Boot réside dans sa capacité à réduire la configuration, notamment grâce aux Starters (ou Dépendances de Démarrage).</p><p>En tant que développeurs **TNDblogdev**, notre objectif est de coder de manière efficace et sans friction. Voici un aperçu des trois dépendances *Starter* que vous utiliserez dans 90 % de vos projets.</p><h2>1. Spring Boot Starter Web : Le Cœur de l'API</h2><p>C'est la dépendance essentielle pour toute application nécessitant des interactions HTTP, comme une API REST ou un microservice. Elle inclut tout ce qu'il faut pour construire des applications web :</p><ul><li><strong>Spring MVC :</strong> Pour gérer les contrôleurs (<code>@RestController</code>) et les mappages d'URL.</li><li><strong>Tomcat Embarqué :</strong> Plus besoin d'installer et de configurer un serveur d'application externe. Spring Boot l'intègre directement.</li><li><strong>Jackson :</strong> Pour la sérialisation/désérialisation automatique du JSON (transformer vos objets Java en JSON, et vice-versa).</li></ul><p><strong>Le conseil de TNDblogdev :</strong> N'utilisez cette dépendance que si votre service a besoin de répondre à des requêtes web. Pour des services purement internes ou basés sur des messages, elle est inutile.</p><h2>2. Spring Boot Starter Data JPA : La Persistance Facile</h2><p>Cette dépendance est indispensable dès que vous devez interagir avec une base de données relationnelle (PostgreSQL, MySQL, etc.) :</p><ul><li><strong>Spring Data JPA :</strong> Simplifie grandement l'accès aux données en éliminant la nécessité d'écrire du code *boilerplate* pour les requêtes CRUD.</li><li><strong>Hibernate :</strong> L'implémentation par défaut de JPA, qui gère le mapping Objet-Relationnel.</li><li><strong>jdbc :</strong> Les bibliothèques de base pour la connexion à la base de données.</li></ul><p>Pour votre blog **TNDblogdev**, c'est ce Starter qui permet de sauvegarder vos articles et commentaires !</p><h2>3. Spring Boot Starter Test : Un Code Reliable</h2><p>Même si vous développez rapidement, la qualité ne doit jamais être un compromis. Cette dépendance est incluse par défaut et rassemble les outils pour tester efficacement votre code :</p><ul><li><strong>JUnit 5 :</strong> Le framework de test standard de Java.</li><li><strong>Mockito :</strong> Pour créer des objets *mock* (simulés) et isoler votre couche de service.</li><li><strong>Spring Test :</strong> Pour charger le contexte Spring lors de vos tests d'intégration.</li></ul><p><strong>Action TNDblogdev :</strong> Prenez l'habitude de créer un test pour chaque nouvelle fonctionnalité. C'est la seule façon de garantir que votre application ne se casse pas lors de futures mises à jour.</p>"
+  }
+]

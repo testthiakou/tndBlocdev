@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titre de l'Article | TND Blog Dev</title>
+    <link rel="stylesheet" href="css/articles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<script src="js/comments.js" defer></script>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <a href="index.html"><img src="image/thn.jpg" alt="mon logo" class="logo-thd"></a>
+            <p>
+                BlogDev
+            </p>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="tutoriels.html">Tutoriels</a></li>
+                <li><a href="a-propos.html">À Propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="article-page-container">
+
+        <article class="blog-post">
+            <header class="post-header">
+                <h1 id="article-title">Démarrer avec Spring Boot 3 : Le guide complet pour 2025</h1>
+                <p class="post-meta">
+                    Par <span class="author">Jean Dubois</span> | Publié le <time datetime="2025-10-01">1 Octobre 2025</time> | Catégorie: <a href="#">Java / Spring Boot</a>
+                </p>
+                <img src="placeholder-java.jpg" alt="Bannière Spring Boot 3" class="post-image">
+            </header>
+
+            <section class="post-content" id="article-content">
+                <p>Bienvenue dans l'univers de Spring Boot ! Sa promesse est simple : vous permettre de créer des applications robustes et prêtes pour la production avec un minimum de configuration.</p>
+                
+                <h2>1. Initialisation du Projet</h2>
+                <p>La meilleure façon de commencer est d'utiliser le <a href="https://start.spring.io/" target="_blank">Spring Initializr</a>. Sélectionnez les dépendances **Spring Web**, **Spring Data JPA**, et **H2 Database**.</p>
+
+                <pre class="code-block">
+                    <code>
+
+                    </code>
+                </pre>
+                
+                <h2>2. Configuration de la Base de Données</h2>
+                <p>Pour la persistance, nous allons utiliser JPA et une base de données H2 en mémoire pour le développement. Le fichier `application.properties` devra contenir :</p>
+                
+                </section>
+
+        </article>
+        
+        <aside class="comments-section">
+            <h2><span id="comment-count">3</span> Commentaires</h2>
+            
+            <form id="comment-form">
+                <h3>Laisser un commentaire</h3>
+                <input type="text" placeholder="Votre nom" required>
+                <input type="email" placeholder="Votre email (ne sera pas publié)" required>
+                <textarea placeholder="Votre commentaire..." rows="5" required></textarea>
+                <button type="submit" class="submit-comment-btn">Publier le Commentaire</button>
+            </form>
+            
+            <div class="comment-list">
+                <div class="comment-item">
+                    <p class="comment-author">Alice (il y a 2 jours)</p>
+                    <p class="comment-text">Excellent tutoriel, très clair pour démarrer ! J'ai hâte de voir la suite sur les tests unitaires avec JUnit.</p>
+                </div>
+                <div class="comment-item">
+                    <p class="comment-author">Marc (il y a 10 heures)</p>
+                    <p class="comment-text">Petite question, est-ce que cette configuration est compatible avec Java 21 ?</p>
+                </div>
+            </div>
+        </aside>
+
+        <aside class="related-articles">
+            <h2>Lire Aussi</h2>
+            <ul>
+                <li><a href="#">Optimiser la performance des requêtes JPA</a></li>
+                <li><a href="#">Tutoriel : Créer une API REST sécurisée avec Spring Security</a></li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 TNDBlogDev. Tous droits réservés.</p>
+        <div class="footer-links">
+            <a href="confidentialite.html">Politique de Confidentialité</a> | <a href="plan.html">Plan du site</a>
+        </div>
+    </footer>
+
+</body>
+</html>

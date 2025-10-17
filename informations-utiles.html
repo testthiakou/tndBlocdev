@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informations Utiles | TNDblogdev</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Configuration des variables de couleur pour la cohérence */
+        :root {
+            --primary-color: #3b82f6; /* Bleu Vif (Tailwind blue-500) */
+            --text-color: #374151; /* Gris foncé pour le texte (Tailwind gray-700) */
+            --accent-light: #eff6ff; /* Bleu très clair */
+            --link-hover: #1e40af; /* Bleu foncé pour le survol */
+        }
+        
+        /* Styles de base et personnalisation Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+            background-color: #f9fafb;
+        }
+
+        /* Style des cartes de lien (similaire à une carte de catégorie légère) */
+        .utility-card {
+            border: 1px solid #e5e7eb;
+            padding: 24px;
+            border-radius: 12px;
+            background-color: white;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .utility-card:hover {
+            box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
+            border-color: var(--primary-color);
+        }
+
+        .utility-icon {
+            color: var(--primary-color);
+            font-size: 2rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-right: 20px;
+            background-color: var(--accent-light);
+            border-radius: 50%;
+        }
+
+        .utility-card a {
+            text-decoration: none;
+        }
+        
+        .utility-card h3 {
+            font-weight: 700;
+            color: #1f2937; /* Gris très foncé */
+            margin-bottom: 4px;
+            transition: color 0.2s;
+        }
+
+        .utility-card:hover h3 {
+            color: var(--link-hover);
+        }
+    </style>
+    <!-- Chosen Palette: Warm Neutrals and Professional Blue Accent -->
+    <!-- Application Structure Plan: A clean, single-column layout centered on the page. The structure uses distinct, clickable cards for each utility link, promoting clarity and ease of access to necessary legal and structural information. This prevents these critical links d'être perdus dans le footer. -->
+    <!-- Visualization & Content Choices: Summary: Legal/Utility links -> Goal: Inform/Organize -> Viz/Presentation Method: Clickable Cards with descriptive text and subtle icons -> Interaction: Direct link navigation -> Justification: Provides clear, accessible targets for crucial non-technical content. -> Library/Method: Tailwind Flex/Grid and custom CSS. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="p-4 md:p-10">
+
+    <main class="max-w-4xl mx-auto">
+        <header class="text-center py-12 bg-white rounded-xl shadow-md mb-10 border-b-4 border-blue-100">
+            <h1 class="text-5xl font-extrabold text-gray-900 mb-4">Informations Utiles</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                Accès rapide à nos ressources légales et à la structure complète du site.
+            </p>
+        </header>
+
+        <section class="space-y-6">
+
+            <!-- Lien 1: Politique de Confidentialité -->
+            <a href="confidentialite.html" class="utility-card">
+                <div class="utility-icon">🔒</div> <!-- Icône Verrou -->
+                <div>
+                    <h3 class="text-xl">Politique de Confidentialité</h3>
+                    <p class="text-sm text-gray-500">Détails clairs et transparents sur la gestion, la collecte et la protection des données de nos utilisateurs.</p>
+                </div>
+            </a>
+            
+            <!-- Lien 2: Mentions Légales -->
+            <a href="mentions-legales.html" class="utility-card">
+                <div class="utility-icon">📜</div> <!-- Icône Rouleau/Document -->
+                <div>
+                    <h3 class="text-xl">Mentions Légales</h3>
+                    <p class="text-sm text-gray-500">Informations d'identification de l'éditeur du blog et conditions générales d'utilisation du contenu.</p>
+                </div>
+            </a>
+
+            <!-- Lien 3: Plan du Site -->
+            <a href="plan.html" class="utility-card">
+                <div class="utility-icon">🧭</div> <!-- Icône Boussole -->
+                <div>
+                    <h3 class="text-xl">Plan du Site</h3>
+                    <p class="text-sm text-gray-500">Une vue d'ensemble complète et structurée de toutes les pages et catégories de TNDblogdev.</p>
+                </div>
+            </a>
+            
+        </section>
+
+    </main>
+
+</body>
+</html>

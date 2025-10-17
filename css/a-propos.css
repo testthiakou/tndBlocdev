@@ -1,0 +1,125 @@
+/* Définitions globales et reset de base */
+:root {
+    --primary-color: #007bff; /* Bleu pour les liens et boutons */
+    --text-color: #333;
+    --bg-color: #f4f7f6; /* Arrière-plan léger */
+    --card-bg: #fff; /* Fond des cartes */
+    --header-bg: #2c3e50; /* Bleu foncé pour l'entête */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+/* --- 1. EN-TÊTE ET NAVIGATION --- */
+.main-header {
+    background-color: var(--header-bg);
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-thd{
+    height: 10vh;
+    border-radius: 35px;
+    gap: 1rem;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 5%;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- 4. PIED DE PAGE --- */
+.main-footer {
+    background-color: var(--header-bg);
+    color: #bbb;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- MEDIA QUERIES (Responsive Design pour les petits écrans) --- */
+/* Le CSS est déjà mobile-first, mais on assure une bonne apparence pour les très petits écrans */
+@media (max-width: 600px) {
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin: 0 0 10px 0;
+    }
+
+    .main-nav ul {
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .main-nav ul li a {
+        padding: 5px 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}

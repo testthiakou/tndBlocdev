@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tous les Tutoriels | THD Blog Dev</title>
+    <link rel="stylesheet" href="css/tutoriels.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<script src="js/tutoriels.js"></script>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <a href="index.html"><img src="image/thn.jpg" alt="mon logo" class="logo-thd"></a>
+            <p>
+                BlogDev
+            </p>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="tutoriels.html" class="active">Tutoriels</a></li>
+                <li><a href="a-propos.html">À Propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Catalogue de Tutoriels</h1>
+        <p class="tagline">Parcourez tous nos articles sur Java, Spring Boot, et le développement web.</p>
+
+        <section class="filter-section">
+            <form id="search-form" class="search-form">
+                <input type="text" id="search-input" placeholder="Rechercher par mot-clé (Spring, CSS, JPA...)" aria-label="Recherche de tutoriels">
+                <button type="submit">Rechercher</button>
+            </form>
+
+            <div class="category-filters">
+                <span>Filtrer par :</span>
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn bt1" data-filter="java">Java/Spring</button>
+                <button class="filter-btn" data-filter="frontend">Front-end</button>
+                <button class="filter-btn" data-filter="bdd">Base de Données</button>
+                <button class="filter-btn" data-filter="architecture">Architecture</button>
+            </div>
+        </section>
+        
+        <section class="latest-articles" id="article-list">
+            
+            <article class="article-card" data-category="java">
+                <img src="image/SPRING.jpg" alt="Image article Spring Boot">
+                <div class="article-content">
+                    <h3><a href="data/articles.json?id=1">Démarrer avec Spring Boot 3</a></h3>
+                    <p class="meta">Publié le 01/10/2025 | Catégorie: Java/Spring</p>
+                    <p>Un guide complet pour configurer votre premier projet Spring Boot moderne.</p>
+                    <a href="data/articles.json?id=1" class="read-more">Lire &rarr;</a>
+                </div>
+            </article>
+
+            <article class="article-card" data-category="frontend">
+                    <img src="image/CSS.jpg" alt="Image article CSS Grid">
+                <div class="article-content">
+                    <h3><a href="article.html?id=2">Maîtriser CSS Grid pour un Responsive Design parfait</a></h3>
+                    <p class="meta">Publié le 28/09/2025 | Catégorie: Front-end</p>
+                    <p>Arrêtez Flexbox ! Découvrez pourquoi CSS Grid est l'outil ultime pour la création de mises en page complexes.</p>
+                    <a href="data/articles.json?id=2" class="read-more">Lire &rarr;</a>
+                </div>
+            </article>
+            
+        </section>
+
+        <!-- <div class="pagination">
+            <a href="#" class="page-link disabled" aria-disabled="true">&laquo; Précédent</a>
+            <span class="page-number">Page 1</span>
+            <a href="#" class="page-link">Suivant &raquo;</a>
+        </div> -->
+        
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 TNDBlogDev. Tous droits réservés.</p>
+        <div class="footer-links">
+            <a href="confidentialite.html">Politique de Confidentialité</a> | <a href="plan.html">Plan du site</a>
+        </div>
+    </footer>
+
+    </body>
+</html>

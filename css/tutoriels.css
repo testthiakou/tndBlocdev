@@ -1,0 +1,254 @@
+/* Définitions globales et reset de base */
+:root {
+    --primary-color: #007bff; /* Bleu pour les liens et boutons */
+    --text-color: #333;
+    --bg-color: #f4f7f6; /* Arrière-plan léger */
+    --card-bg: #fff; /* Fond des cartes */
+    --header-bg: #2c3e50; /* Bleu foncé pour l'entête */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+/* --- 1. EN-TÊTE ET NAVIGATION --- */
+.main-header {
+    background-color: var(--header-bg);
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-thd{
+    height: 10vh;
+    border-radius: 35px;
+    gap: 1rem;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 5%;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- SECTION FILTRES ET RECHERCHE --- */
+
+/* Conteneur principal des filtres */
+.filter-section {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments d'aller à la ligne sur petits écrans */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Texte "Filtrer par :" */
+.category-filters span {
+    font-weight: 700;
+    color: var(--text-color);
+    margin-right: 15px;
+}
+
+/* Conteneur des boutons de filtre */
+.category-filters {
+    display: flex;
+    gap: 10px; /* Espace entre les boutons */
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Style de base des boutons de filtre */
+.filter-btn {
+    padding: 8px 15px;
+    border: 1px solid var(--primary-color); /* Bordure de couleur primaire */
+    background-color: transparent;
+    color: var(--primary-color);
+    border-radius: 20px; /* Coins très arrondis (style "pill") */
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.3s ease; /* Transition douce pour l'effet de survol */
+    white-space: nowrap; /* Empêche la coupure du texte du bouton */
+}
+
+/* Effet de survol (Hover) */
+.filter-btn:hover:not(.active) {
+    background-color: var(--primary-color);
+    color: white;
+    opacity: 0.9;
+}
+
+/* Style du bouton ACTIF (catégorie sélectionnée) */
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color); /* Maintient une bordure solide */
+    font-weight: 700;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.3); /* Légère ombre pour le mettre en évidence */
+    pointer-events: none; /* Désactive le clic sur le bouton déjà actif */
+}
+
+/* --- Style du Formulaire de Recherche --- */
+
+/* Le conteneur du formulaire (Flexbox pour aligner l'input et le bouton) */
+.search-form {
+    display: flex;
+    width: 60%; /* Prend une bonne largeur sur grand écran */
+    max-width: 450px;
+    margin-right: 20px; /* Espace avec les boutons de filtre */
+}
+
+/* Champ de Saisie de la Recherche */
+#search-input {
+    flex-grow: 1; /* Permet au champ de prendre tout l'espace restant */
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-right: none; /* Supprime la bordure droite pour qu'elle fusionne avec le bouton */
+    border-radius: 4px 0 0 4px; /* Coins arrondis uniquement à gauche */
+    font-size: 1em;
+    outline: none; /* Supprime l'outline par défaut au focus */
+    transition: border-color 0.3s;
+}
+
+#search-input:focus {
+    border-color: var(--primary-color); /* Bordure bleue au focus */
+    box-shadow: 0 0 0 1px var(--primary-color);
+    z-index: 1; /* Assure que la bordure ne soit pas coupée par le bouton */
+}
+
+/* Bouton "Rechercher" */
+.search-form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: var(--header-bg); /* Couleur du Header (bleu foncé) */
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0; /* Coins arrondis uniquement à droite */
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.search-form button[type="submit"]:hover {
+    background-color: #1e3040; /* Assombrissement léger au survol */
+}
+
+
+/* --- Adaptation Mobile (Réutilise le Media Query) --- */
+
+@media (max-width: 768px) {
+    .filter-section {
+        /* ... (déjà défini : flex-direction: column; align-items: flex-start;) ... */
+    }
+    
+    .search-form {
+        width: 100%; /* La barre de recherche prend toute la largeur */
+        margin-right: 0;
+    }
+}
+
+/* --- ADAPTATION MOBILE (Responsive) --- */
+
+@media (max-width: 768px) {
+    .filter-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .search-form {
+        /* Assure que la recherche prend toute la largeur */
+        width: 100%; 
+    }
+    
+    .category-filters {
+        /* Assure que les filtres s'alignent bien sous la barre de recherche */
+        justify-content: flex-start;
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+/* --- 4. PIED DE PAGE --- */
+.main-footer {
+    background-color: var(--header-bg);
+    color: #bbb;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* --- MEDIA QUERIES (Responsive Design pour les petits écrans) --- */
+/* Le CSS est déjà mobile-first, mais on assure une bonne apparence pour les très petits écrans */
+@media (max-width: 600px) {
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin: 0 0 10px 0;
+    }
+
+    .main-nav ul {
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .main-nav ul li a {
+        padding: 5px 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}

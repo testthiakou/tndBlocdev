@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catégories Techniques | TNDblogdev</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Configuration des variables de couleur */
+        :root {
+            --primary-color: #3b82f6; /* Bleu Vif (Tailwind blue-500) */
+            --text-color: #374151; /* Gris foncé pour le texte */
+            --accent-light: #eff6ff; /* Bleu très clair */
+            --java-color: #ef4444; /* Rouge pour Java (Tailwind red-500) */
+            --fe-color: #06b6d4; /* Cyan pour Front-end (Tailwind cyan-500) */
+            --archi-color: #10b981; /* Vert pour Architecture (Tailwind emerald-500) */
+            --career-color: #f59e0b; /* Ambre pour Carrière (Tailwind amber-500) */
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+            background-color: #f9fafb;
+            line-height: 1.6;
+        }
+
+        /* Style général des cartes de catégorie */
+        .category-card {
+            border: 1px solid #e5e7eb;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+
+        .category-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: translateY(-5px);
+        }
+
+        /* Styles spécifiques aux icônes et bordures des cartes */
+        .icon-java { color: var(--java-color); background-color: #fee2e2; }
+        .icon-fe { color: var(--fe-color); background-color: #e0f7fa; }
+        .icon-archi { color: var(--archi-color); background-color: #d1fae5; }
+        .icon-career { color: var(--career-color); background-color: #fef3c7; }
+        
+        a { color: #374151;}
+        .border-java { border-left-color: var(--java-color); }
+        .border-fe { border-left-color: var(--fe-color); }
+        .border-archi { border-left-color: var(--archi-color); }
+        .border-career { border-left-color: var(--career-color); }
+    </style>
+    <!-- Chosen Palette: Warm Neutrals, Primary Blue, and Thematic Color Accents (Red, Cyan, Green, Amber) -->
+    <!-- Application Structure Plan: A thematic overview page using a responsive grid (2 columns on desktop, 1 on mobile). The structure uses visually distinct cards for each major category, enhancing readability and quick navigation to a specific topic. This design is chosen for clarity and motivation. -->
+    <!-- Visualization & Content Choices: Summary: Detailed category content -> Goal: Inform/Motivate -> Viz/Presentation Method: Thematic Cards with Icons and Detailed Lists -> Interaction: Simple link navigation at the bottom of each card -> Justification: Cards are ideal for categorisation and presenting dense information in a digestible, separate block. -> Library/Method: Tailwind Grid and custom CSS theming. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="p-4 md:p-10">
+
+    <main class="max-w-7xl mx-auto">
+        <header class="text-center py-12 bg-white rounded-xl shadow-md mb-10">
+            <h1 class="text-5xl font-extrabold text-gray-900 mb-4">Espace Tutoriels Techniques</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Plongez dans les fondamentaux et les techniques avancées du développement. Chez TNDblogdev, chaque catégorie est une feuille de route vers l'expertise.
+            </p>
+        </header>
+
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <!-- Carte 1 : Java & Spring Boot -->
+            <div class="category-card p-6 rounded-xl border-l-4 border-java">
+                <div class="flex items-center space-x-4 mb-4">
+                    <span class="text-4xl p-3 rounded-full icon-java shadow-sm">☕</span>
+                    <h2 class="text-3xl font-bold text-gray-800">Java & Spring Boot</h2>
+                </div>
+                <p class="text-gray-700 mb-4">
+                    Le pilier du développement backend. Maîtrisez la création de microservices performants, robustes et prêts pour le Cloud.
+                </p>
+                <ul class="list-disc pl-6 space-y-2 text-gray-600">
+                    <li>**Microservices & API RESTful :** Concevoir des architectures distribuées avec Spring Cloud.</li>
+                    <li>**Spring Data & Persistance :** Gestion des bases de données relationnelles (JPA, Hibernate) et NoSQL.</li>
+                    <li>**Sécurité (Spring Security) :** Authentification, autorisation et défense contre les menaces courantes.</li>
+                    <li>**Tests et Qualité :** Intégration de JUnit 5, Mockito pour des tests unitaires et d'intégration solides.</li>
+                </ul>
+                <a href="tutoriels.html?filter=java" class="mt-6 inline-block bg-java text-green font-semibold py-2 px-4 rounded-full hover:bg-red-600 transition duration-200 shadow-md">
+                    Explorer les tutoriels Java/Spring →
+                </a>
+            </div>
+
+            <!-- Carte 2 : Développement Front-end -->
+            <div class="category-card p-6 rounded-xl border-l-4 border-fe">
+                <div class="flex items-center space-x-4 mb-4">
+                    <span class="text-4xl p-3 rounded-full icon-fe shadow-sm">✨</span>
+                    <h2 class="text-3xl font-bold text-gray-800">Développement Front-end</h2>
+                </div>
+                <p class="text-gray-700 mb-4">
+                    Créez des expériences utilisateur (UX) fluides et accessibles. Nous couvrons les outils essentiels pour des interfaces modernes.
+                </p>
+                <ul class="list-disc pl-6 space-y-2 text-gray-600">
+                    <li>**Layouts Avancés :** Maîtriser CSS Grid et Flexbox pour des mises en page complexes et responsive.</li>
+                    <li>**Performance Web :** Optimisation du temps de chargement, lazy loading et Core Web Vitals.</li>
+                    <li>**Sémantique & Accessibilité (A11Y) :** Utilisation correcte de HTML5 et des attributs ARIA.</li>
+                    <li>**Préprocesseurs & Frameworks CSS :** Utilisation de Tailwind CSS et autres méthodologies de style.</li>
+                </ul>
+                <a href="tutoriels.html?filter=frontend" class="mt-6 inline-block bg-fe text-green font-semibold py-2 px-4 rounded-full hover:bg-cyan-600 transition duration-200 shadow-md">
+                    Voir les guides Front-end →
+                </a>
+            </div>
+
+            <!-- Carte 3 : Architecture & Bonnes Pratiques -->
+            <div class="category-card p-6 rounded-xl border-l-4 border-archi">
+                <div class="flex items-center space-x-4 mb-4">
+                    <span class="text-4xl p-3 rounded-full icon-archi shadow-sm">📐</span>
+                    <h2 class="text-3xl font-bold text-gray-800">Architecture & Bonnes Pratiques</h2>
+                </div>
+                <p class="text-gray-700 mb-4">
+                    Passez du code fonctionnel au code professionnel. Les principes qui garantissent la maintenabilité et la scalabilité à long terme.
+                </p>
+                <ul class="list-disc pl-6 space-y-2 text-gray-600">
+                    <li>**Principes SOLID & Clean Code :** Écrire du code propre, lisible et facile à maintenir.</li>
+                    <li>**Design Patterns :** Quand et comment utiliser Factory, Singleton, Observer, etc.</li>
+                    <li>**Domain-Driven Design (DDD) :** Modéliser votre code autour du cœur de métier.</li>
+                    <li>**Scalabilité et CI/CD :** Mise en place de pipelines d'intégration et de livraison continues.</li>
+                </ul>
+                <a href="tutoriels.html?filter=architecture" class="mt-6 inline-block bg-archi text-green font-semibold py-2 px-4 rounded-full hover:bg-emerald-600 transition duration-200 shadow-md">
+                    Maîtriser l'Architecture →
+                </a>
+            </div>
+
+            <!-- Carte 4 : Carrière & Productivité -->
+            <div class="category-card p-6 rounded-xl border-l-4 border-career">
+                <div class="flex items-center space-x-4 mb-4">
+                    <span class="text-4xl p-3 rounded-full icon-career shadow-sm">🚀</span>
+                    <h2 class="text-3xl font-bold text-gray-800">Carrière & Productivité</h2>
+                </div>
+                <p class="text-gray-700 mb-4">
+                    Optimisez votre parcours de développeur. Techniques pour les entretiens, gestion du temps et outils incontournables.
+                </p>
+                <ul class="list-disc pl-6 space-y-2 text-gray-600">
+                    <li>**Préparation aux Entretiens :** Algorithmique, structures de données et questions comportementales.</li>
+                    <li>**Gestion du Temps et Focus :** Techniques Pomodoro, gestion des interruptions et outils de planification.</li>
+                    <li>**Outils de Développement :** Astuces et configurations avancées pour VS Code, IntelliJ, et Git.</li>
+                    <li>**Marque Personnelle :** Créer un portfolio percutant et optimiser son profil LinkedIn.</li>
+                </ul>
+                <a href="tutoriels.html?filter=carriere" class="mt-6 inline-block bg-career text-green font-semibold py-2 px-4 rounded-full hover:bg-amber-600 transition duration-200 shadow-md">
+                    Boostez votre Carrière →
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
